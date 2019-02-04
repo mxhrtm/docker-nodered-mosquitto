@@ -12,8 +12,6 @@ services:
     - "1880:1880"
     volumes:
     - ${PWD}/nodered/runtime:/root/.node-red
-    links:
-    - mosquitto
     command: /usr/local/bin/node-red -v flows.json
 
   mosquitto:
