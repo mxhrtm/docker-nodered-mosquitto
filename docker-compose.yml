@@ -2,8 +2,7 @@ version: '3'
 services:
 
   nodered:
-    image: ${USER}/node-red
-    build: ./nodered
+    image: nodered/node-red-docker
     networks:
     - microservicesnet
     environment:
@@ -15,8 +14,7 @@ services:
     command: /usr/local/bin/node-red -v flows.json
 
   mosquitto:
-    image: ${USER}/mosquitto
-    build: ./mosquitto
+    image: eclipse-mosquitto
     networks:
     - microservicesnet
     environment:
