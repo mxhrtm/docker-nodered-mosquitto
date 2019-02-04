@@ -27,4 +27,4 @@ services:
 
 networks:
   microservicesnet:
-    driver: bridge
+    driver: overlay
